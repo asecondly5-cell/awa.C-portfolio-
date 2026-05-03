@@ -533,23 +533,6 @@
             padding-left: 5px;
         }
 
-        .contact-info {
-            list-style: none;
-        }
-
-        .contact-info li {
-            margin-bottom: 15px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            color: rgba(255, 255, 255, 0.7);
-        }
-
-        .contact-info i {
-            color: var(--accent);
-            width: 20px;
-        }
-
         .social-links {
             display: flex;
             gap: 15px;
@@ -632,15 +615,7 @@
                 text-align: center;
             }
 
-            .veille-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .tools-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .tendances-grid {
+            .veille-grid, .tools-grid, .tendances-grid {
                 grid-template-columns: 1fr;
             }
         }
@@ -729,10 +704,6 @@
             <!-- Filtres -->
             <div class="filters">
                 <button class="filter-btn active" data-filter="all">Tous</button>
-                <!-- <button class="filter-btn" data-filter="ai">IA & Machine Learning</button>
-                <button class="filter-btn" data-filter="web">Développement Web</button>
-                <button class="filter-btn" data-filter="cloud">Cloud & DevOps</button>
-                <button class="filter-btn" data-filter="mobile">Mobile</button> -->
             </div>
 
             <!-- Articles -->
@@ -748,140 +719,19 @@
                         </div>
                     </div>
                     <div class="veille-content">
-                        <p>Comment l’intelligence artificielle peut-elle transformer la médecine tout en respectant la sécurité des données et l’éthique des soins ?
-Jusqu’où l’IA peut-elle assister les médecins sans remplacer le jugement humain ?</p>
+                        <p>Comment l’intelligence artificielle peut-elle transformer la médecine tout en respectant la sécurité des données et l’éthique des soins ? Jusqu’où l’IA peut-elle assister les médecins sans remplacer le jugement humain ?</p>
                         <div class="veille-tags">
                             <span class="tag">IA</span>
                             <span class="tag">Medecine/santé</span>
                             <span class="tag">Développement</span>
                             <span class="tag">Données</span>
                         </div>
-                        <a href="Fichiers\veille-ia.pdf" class="veille-link">
+                        <a href="Fichiers/veille-ia.pdf" class="veille-link">
                             Lire l'article complet
                             <i class="fas fa-arrow-right"></i>
                         </a>
                     </div>
                 </div>
-
-                <!-- Article 2
-                <div class="veille-card" data-category="web">
-                    <div class="veille-header">
-                        <span class="veille-category">Développement Web</span>
-                        <h3>Les Progressive Web Apps en 2024 : état des lieux</h3>
-                        <div class="veille-meta">
-                            <span>10 Mars 2024</span>
-                            <span>6 min de lecture</span>
-                        </div>
-                    </div>
-                    <div class="veille-content">
-                        <p>Analyse des dernières avancées en matière de PWA et leur adoption croissante dans l'écosystème web moderne.</p>
-                        <div class="veille-tags">
-                            <span class="tag">PWA</span>
-                            <span class="tag">Web</span>
-                            <span class="tag">Mobile</span>
-                        </div>
-                        <a href="#" class="veille-link">
-                            Lire l'article complet
-                            <i class="fas fa-arrow-right"></i>
-                        </a>
-                    </div>
-                </div> -->
-
-                <!-- Article 3 -->
-                <!-- <div class="veille-card" data-category="cloud">
-                    <div class="veille-header">
-                        <span class="veille-category">Cloud & DevOps</span>
-                        <h3>Serverless : vers une nouvelle architecture cloud</h3>
-                        <div class="veille-meta">
-                            <span>5 Mars 2024</span>
-                            <span>10 min de lecture</span>
-                        </div>
-                    </div>
-                    <div class="veille-content">
-                        <p>Exploration des avantages et défis du serverless computing et son impact sur l'architecture des applications modernes.</p>
-                        <div class="veille-tags">
-                            <span class="tag">Serverless</span>
-                            <span class="tag">Cloud</span>
-                            <span class="tag">Architecture</span>
-                        </div>
-                        <a href="#" class="veille-link">
-                            Lire l'article complet
-                            <i class="fas fa-arrow-right"></i>
-                        </a>
-                    </div>
-                </div> -->
-
-                <!-- Article 4 -->
-                <!-- <div class="veille-card" data-category="mobile">
-                    <div class="veille-header">
-                        <span class="veille-category">Mobile</span>
-                        <h3>React Native vs Flutter : le match 2024</h3>
-                        <div class="veille-meta">
-                            <span>28 Février 2024</span>
-                            <span>12 min de lecture</span>
-                        </div>
-                    </div>
-                    <div class="veille-content">
-                        <p>Comparaison approfondie des deux frameworks de développement mobile cross-platform les plus populaires.</p>
-                        <div class="veille-tags">
-                            <span class="tag">React Native</span>
-                            <span class="tag">Flutter</span>
-                            <span class="tag">Mobile</span>
-                        </div>
-                        <a href="#" class="veille-link">
-                            Lire l'article complet
-                            <i class="fas fa-arrow-right"></i>
-                        </a>
-                    </div>
-                </div> -->
-
-                <!-- Article 5 -->
-                <!-- <div class="veille-card" data-category="ai">
-                    <div class="veille-header">
-                        <span class="veille-category">IA & Machine Learning</span>
-                        <h3>L'éthique de l'IA dans le développement</h3>
-                        <div class="veille-meta">
-                            <span>20 Février 2024</span>
-                            <span>7 min de lecture</span>
-                        </div>
-                    </div>
-                    <div class="veille-content">
-                        <p>Réflexion sur les enjeux éthiques et les bonnes pratiques à adopter lors de l'intégration de l'IA dans nos applications.</p>
-                        <div class="veille-tags">
-                            <span class="tag">Éthique</span>
-                            <span class="tag">IA</span>
-                            <span class="tag">Développement</span>
-                        </div>
-                        <a href="#" class="veille-link">
-                            Lire l'article complet
-                            <i class="fas fa-arrow-right"></i>
-                        </a>
-                    </div>
-                </div> -->
-
-                <!-- Article 6 -->
-                <!-- <div class="veille-card" data-category="web">
-                    <div class="veille-header">
-                        <span class="veille-category">Développement Web</span>
-                        <h3>Web3 et les applications décentralisées</h3>
-                        <div class="veille-meta">
-                            <span>15 Février 2024</span>
-                            <span>9 min de lecture</span>
-                        </div>
-                    </div>
-                    <div class="veille-content">
-                        <p>Comprendre l'écosystème Web3 et son potentiel impact sur le développement d'applications décentralisées.</p>
-                        <div class="veille-tags">
-                            <span class="tag">Web3</span>
-                            <span class="tag">Blockchain</span>
-                            <span class="tag">DApps</span>
-                        </div>
-                        <a href="#" class="veille-link">
-                            Lire l'article complet
-                            <i class="fas fa-arrow-right"></i>
-                        </a>
-                    </div>
-                </div> -->
             </div>
         </div>
     </section>
@@ -1092,21 +942,7 @@ Jusqu’où l’IA peut-elle assister les médecins sans remplacer le jugement h
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <!-- <h3>Contact</h3>
-                    <ul class="contact-info">
-                        <li>
-                            <i class="fas fa-envelope"></i>
-                            x
-                        </li>
-                        <li>
-                            <i class="fas fa-phone"></i>
-                            x
-                        </li>
-                        <li>
-                            <i class="fas fa-map-marker-alt"></i>
-                            x
-                        </li>
-                    </ul> -->
+                    <h3>Réseaux Sociaux</h3>
                     <div class="social-links">
                         <a href="#"><i class="fab fa-linkedin-in"></i></a>
                         <a href="#"><i class="fab fa-github"></i></a>
@@ -1114,10 +950,65 @@ Jusqu’où l’IA peut-elle assister les médecins sans remplacer le jugement h
                         <a href="#"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
-                <div class="footer-section">
-                    <h3>Newsletter</h3>
-                    <p>Recevez mes dernières découvertes technologiques directement dans votre boîte mail.</p>
-                    <form style="margin-top: 15px;">
-                        <input type="email" placeholder="Votre email" style="padding: 10px; border: none; border-radius: 5px; width: 100%; margin-bottom: 10px;">
-                        <button type="submit" style
-                        
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Awa C. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Menu hamburger pour mobile
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+
+        hamburger.addEventListener('click', function() {
+            this.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+
+        // Fermer le menu en cliquant sur un lien
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // Animation au défilement pour la navbar
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.1)';
+                header.style.backgroundColor = 'rgba(255, 255, 255, 0.98)';
+            } else {
+                header.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.08)';
+                header.style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
+            }
+        });
+
+        // Filtrage simple pour les articles (si tu ajoutes d'autres articles plus tard)
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const veilleCards = document.querySelectorAll('.veille-card');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remove active class from all buttons
+                filterBtns.forEach(b => b.classList.remove('active'));
+                // Add active class to clicked button
+                btn.classList.add('active');
+
+                const filterValue = btn.getAttribute('data-filter');
+
+                veilleCards.forEach(card => {
+                    if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
