@@ -143,34 +143,6 @@
             border-radius: 2px;
         }
 
-        /* Navigation interne */
-        .internal-nav {
-            display: flex;
-            justify-content: center;
-            list-style: none;
-            margin-bottom: 40px;
-            flex-wrap: wrap;
-            gap: 15px;
-        }
-
-        .internal-nav a {
-            padding: 12px 24px;
-            background: white;
-            border-radius: 30px;
-            color: var(--neutral-dark);
-            text-decoration: none;
-            font-weight: 500;
-            transition: var(--transition);
-            box-shadow: var(--shadow);
-            border: 2px solid transparent;
-        }
-
-        .internal-nav a:hover, .internal-nav a.active {
-            background: var(--primary);
-            color: white;
-            transform: translateY(-2px);
-        }
-
         /* Timeline */
         .timeline {
             position: relative;
@@ -294,15 +266,8 @@
             border: 1px solid rgba(0, 0, 0, 0.05);
         }
 
-        .education-section, .experience-section, .certifications-section {
+        .experience-section {
             margin-bottom: 80px;
-        }
-
-        .section-subtitle {
-            text-align: center;
-            margin-bottom: 40px;
-            color: var(--secondary);
-            font-size: 1.5rem;
         }
 
         /* Statistiques */
@@ -339,7 +304,7 @@
             font-weight: 500;
         }
 
-        /* --- Téléchargement CV (NOUVEAU STYLE) --- */
+        /* --- Téléchargement CV --- */
         .download-section {
             background: white;
             border-radius: var(--radius);
@@ -447,23 +412,6 @@
             padding-left: 5px;
         }
 
-        .contact-info {
-            list-style: none;
-        }
-
-        .contact-info li {
-            margin-bottom: 15px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            color: rgba(255, 255, 255, 0.7);
-        }
-
-        .contact-info i {
-            color: var(--accent);
-            width: 20px;
-        }
-
         .social-links {
             display: flex;
             gap: 15px;
@@ -546,8 +494,6 @@
             .timeline-content::before { left: 21px; }
             .timeline-item:nth-child(even) .timeline-content::before { left: 21px; }
             .stats-container { grid-template-columns: 1fr; }
-            .internal-nav { flex-direction: column; align-items: center; }
-            .internal-nav a { width: 200px; text-align: center; }
             .download-btn { display: flex; margin: 10px auto; width: 100%; max-width: 300px; justify-content: center; }
         }
     </style>
@@ -562,8 +508,7 @@
                 </div>
                 <ul class="nav-links">
                     <li><a href="index.html">Accueil</a></li>
-                    <!-- Remplacement de "Portfolio" par "Parcours" ici : -->
-                    <li><a href="parcours.html">Parcours</a></li>
+                    <li><a href="parcours.html" class="active">Parcours</a></li>
                     <li><a href="projets.html">Projets</a></li>
                     <li><a href="compétences.html">Compétences</a></li>
                     <li><a href="veille.html">Veille</a></li>
@@ -580,108 +525,37 @@
     <div class="container">
         <section id="parcours">
             <div class="section-title">
-                <h2>Mon Parcours</h2>
-                <p>Découvrez mon évolution professionnelle et académique</p>
+                <h2>Mon Évolution</h2>
+                <p>Découvrez mon parcours académique et professionnel de manière chronologique</p>
             </div>
 
-            <ul class="internal-nav">
-                <li><a href="#experience" class="active">Expérience</a></li>
-                <li><a href="#education">Formation</a></li>
-                </ul>
-
-            <div class="experience-section" id="experience">
-                <h3 class="section-subtitle">Expérience Professionnelle</h3>
+            <div class="experience-section">
+                <!-- TIMELINE UNIFIÉE ET CHRONOLOGIQUE -->
                 <div class="timeline">
-                     <div class="timeline-item">
-                        <div class="timeline-content">
-                            <div class="timeline-date">
-                                <i class="far fa-calendar-alt"></i>
-                                2025 - Présent
-                            </div>
-                            <h3>Technicienne systèmes et réseaux</h3>
-                            <div class="company">
-                                <i class="fas fa-building"></i>
-                                Ministère de l'intérieur 
-                            </div>
-                            <p>Participation à l'administration des serveurs et à la supervision du réseau. Configuration d'équipements actifs (switchs/routeurs), gestion des droits d'accès (Active Directory) et application des politiques de sécurité.</p>
-                            <div class="timeline-skills">
-                                <span class="skill-tag">Bash/Linux</span>
-                                <span class="skill-tag">AD</span>
-                                <span class="skill-tag">Windows Serveur</span>
-                                <span class="skill-tag">AWS</span>
-                                <span class="skill-tag">Cisco</span>
-                            </div>
-                        </div>
-                    </div> 
-
+                    
+                    <!-- 1. BAC ES -->
                     <div class="timeline-item">
                         <div class="timeline-content">
                             <div class="timeline-date">
                                 <i class="far fa-calendar-alt"></i>
-                                2025
+                                2019
                             </div>
-                            <h3>Chargé de recouvrement</h3>
-                            <div class="company">
-                                <i class="fas fa-building"></i>
-                                Stellantis 
-                            </div>
-                            <p>Gestion amiable des impayés et relation client. Prise en charge des dossiers débiteurs, analyse de la situation financière et négociation de plans de remboursement adaptés pour régulariser la situation tout en préservant l'image de l'entreprise.</p>
-                            <div class="timeline-skills">
-                                <span class="skill-tag">Excel</span>
-                                <span class="skill-tag">Windows</span>
-                                <span class="skill-tag">Teams</span>
-                            </div>
-                        </div>
-                    </div> 
-
-                    <div class="timeline-item">
-                        <div class="timeline-content">
-                            <div class="timeline-date">
-                                <i class="far fa-calendar-alt"></i>
-                                2025
-                            </div>
-                            <h3>Technicienne Systèmes et Réseaux</h3>
-                            <div class="company">
-                                <i class="fas fa-building"></i>
-                                Securinfor
-                            </div>
-                            <p>Préparation et déploiement des nouveaux postes de travail (masterisation). Gestion physique du parc informatique : réception du matériel, inventaire, installation sur bureau et gestion du câblage (brassage simple).  Point d'entrée du support IT. Réception et qualification des demandes utilisateurs (téléphone/mail). Création des tickets d'incidents et orientation vers les techniciens spécialisés (N1/N2) selon les procédures internes.</p>
-                            <div class="timeline-skills">
-                                <span class="skill-tag">HTML/CSS</span>
-                                <span class="skill-tag">JavaScript</span>
-                                <span class="skill-tag">PHP</span>
-                                <span class="skill-tag">WordPress</span>
-                                <span class="skill-tag">MySQL</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="education-section" id="education">
-                <h3 class="section-subtitle">Formation Académique</h3>
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <div class="timeline-content">
-                            <div class="timeline-date">
-                                <i class="far fa-calendar-alt"></i>
-                                2024 - 2026
-                            </div>
-                            <h3>BTS SIO </h3>
+                            <h3>BAC ES</h3>
                             <div class="company">
                                 <i class="fas fa-university"></i>
-                                IPSSY SQY - Grande Ecole Informatique
+                                Lycée Général Dumont d'Urville
                             </div>
-                            <p>Formation diplômante de niveau Bac+2 axée sur l'administration, la sécurisation et la maintenance des infrastructures informatiques. L'option SISR forme des spécialistes capables de gérer des serveurs, de configurer des équipements réseaux (commutateurs, routeurs) et d'assurer la disponibilité des services (Web, Messagerie, Fichiers) tout en veillant à la cybersécurité du système d'information.</p>
+                            <p>Baccalauréat ES - Spécialité Mathématiques. Formation généraliste centrée sur les enjeux économiques et sociaux. La spécialité Mathématiques apporte une rigueur logique et des compétences approfondies en analyse (graphes, matrices), des atouts structurels pour la compréhension des architectures réseaux modernes.</p>
                             <div class="timeline-skills">
-                                <span class="skill-tag">Systèmes</span>
-                                <span class="skill-tag">Réseaux</span>
-                                <span class="skill-tag">Architecture</span>
-                                <span class="skill-tag">Python</span>
+                                <span class="skill-tag">Logique</span>
+                                <span class="skill-tag">Économie</span>
+                                <span class="skill-tag">Mathématiques</span>
+                                <span class="skill-tag">Analyse</span>
                             </div>
                         </div>
                     </div>
 
+                    <!-- 2. PCSO -->
                     <div class="timeline-item">
                         <div class="timeline-content">
                             <div class="timeline-date">
@@ -702,26 +576,95 @@
                         </div>
                     </div>
 
+                    <!-- 3. BTS SIO -->
                     <div class="timeline-item">
                         <div class="timeline-content">
                             <div class="timeline-date">
                                 <i class="far fa-calendar-alt"></i>
-                                2019
+                                2024 - 2026
                             </div>
-                            <h3>BAC ES</h3>
+                            <h3>BTS SIO</h3>
                             <div class="company">
                                 <i class="fas fa-university"></i>
-                                Lycée Géneral Dumont d'Urville
+                                IPSSY SQY - Grande Ecole Informatique
                             </div>
-                            <p>Baccalauréat ES - Spécialité Mathématiques Description : Formation généraliste centrée sur les enjeux économiques et sociaux. La spécialité Mathématiques apporte une rigueur logique et des compétences approfondies en analyse (graphes, matrices), des atouts structurels pour la compréhension des architectures réseaux modernes</p>
+                            <p>Formation diplômante de niveau Bac+2 axée sur l'administration, la sécurisation et la maintenance des infrastructures informatiques. L'option SISR forme des spécialistes capables de gérer des serveurs, de configurer des équipements réseaux et d'assurer la disponibilité des services tout en veillant à la cybersécurité.</p>
                             <div class="timeline-skills">
-                                <span class="skill-tag">Logique</span>
-                                <span class="skill-tag">Economie</span>
-                                <span class="skill-tag">Mathématiques</span>
-                                <span class="skill-tag">Analyse</span>
+                                <span class="skill-tag">Systèmes</span>
+                                <span class="skill-tag">Réseaux</span>
+                                <span class="skill-tag">Architecture</span>
+                                <span class="skill-tag">Python</span>
                             </div>
                         </div>
                     </div>
+
+                    <!-- 4. SECURINFOR -->
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <div class="timeline-date">
+                                <i class="far fa-calendar-alt"></i>
+                                2025
+                            </div>
+                            <h3>Technicienne Systèmes et Réseaux</h3>
+                            <div class="company">
+                                <i class="fas fa-building"></i>
+                                Securinfor
+                            </div>
+                            <p>Préparation et déploiement des nouveaux postes de travail (masterisation). Gestion physique du parc informatique : réception du matériel, inventaire, installation sur bureau et gestion du câblage (brassage simple). Point d'entrée du support IT. Création des tickets d'incidents et orientation vers les techniciens spécialisés (N1/N2).</p>
+                            <div class="timeline-skills">
+                                <span class="skill-tag">HTML/CSS</span>
+                                <span class="skill-tag">JavaScript</span>
+                                <span class="skill-tag">PHP</span>
+                                <span class="skill-tag">WordPress</span>
+                                <span class="skill-tag">MySQL</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 5. STELLANTIS -->
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <div class="timeline-date">
+                                <i class="far fa-calendar-alt"></i>
+                                2025
+                            </div>
+                            <h3>Chargé de recouvrement</h3>
+                            <div class="company">
+                                <i class="fas fa-building"></i>
+                                Stellantis 
+                            </div>
+                            <p>Gestion amiable des impayés et relation client. Prise en charge des dossiers débiteurs, analyse de la situation financière et négociation de plans de remboursement adaptés pour régulariser la situation tout en préservant l'image de l'entreprise.</p>
+                            <div class="timeline-skills">
+                                <span class="skill-tag">Excel</span>
+                                <span class="skill-tag">Windows</span>
+                                <span class="skill-tag">Teams</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 6. MINISTÈRE DE L'INTÉRIEUR -->
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <div class="timeline-date">
+                                <i class="far fa-calendar-alt"></i>
+                                2025 - Présent
+                            </div>
+                            <h3>Technicienne systèmes et réseaux</h3>
+                            <div class="company">
+                                <i class="fas fa-building"></i>
+                                Ministère de l'intérieur 
+                            </div>
+                            <p>Participation à l'administration des serveurs et à la supervision du réseau. Configuration d'équipements actifs (switchs/routeurs), gestion des droits d'accès (Active Directory) et application des politiques de sécurité.</p>
+                            <div class="timeline-skills">
+                                <span class="skill-tag">Bash/Linux</span>
+                                <span class="skill-tag">AD</span>
+                                <span class="skill-tag">Windows Serveur</span>
+                                <span class="skill-tag">AWS</span>
+                                <span class="skill-tag">Cisco</span>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
 
@@ -766,30 +709,12 @@
                     <h3>Navigation</h3>
                     <ul class="footer-links">
                         <li><a href="index.html">Accueil</a></li>
-                        <!-- J'ai également remplacé "Portfolio" par "Parcours" et supprimé le doublon plus bas -->
                         <li><a href="parcours.html">Parcours</a></li>
                         <li><a href="projets.html">Projets</a></li>
                         <li><a href="competences.html">Compétences</a></li>
                         <li><a href="veille.html">Veille Technologique</a></li>
                     </ul>
                 </div>
-                <!-- <div class="footer-section">
-                    <h3>Contact</h3>
-                    <ul class="contact-info">
-                        <li>
-                            <i class="fas fa-envelope"></i>
-                            awa.cissokho.k@gmail.com
-                        </li>
-                        <li>
-                            <i class="fas fa-map-marker-alt"></i>
-                            Paris, France
-                        </li>
-                    </ul>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#"><i class="fab fa-github"></i></a>
-                    </div>
-                </div> -->
                 <div class="footer-section">
                     <h3>Disponibilité</h3>
                     <p>Je suis actuellement disponible pour des missions freelance et des opportunités de collaboration intéressantes.</p>
@@ -835,29 +760,6 @@
             }
         });
 
-        // Navigation smooth scroll
-        document.querySelectorAll('.internal-nav a').forEach(link => {
-            link.addEventListener('click', function(e) {
-                e.preventDefault();
-                
-                // Retirer la classe active de tous les liens
-                document.querySelectorAll('.internal-nav a').forEach(a => {
-                    a.classList.remove('active');
-                });
-                
-                // Ajouter la classe active au lien cliqué
-                this.classList.add('active');
-                
-                // Scroll vers la section
-                const targetId = this.getAttribute('href');
-                const targetSection = document.querySelector(targetId);
-                targetSection.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-            });
-        });
-
         // Animation des éléments de timeline au scroll
         const observerOptions = {
             threshold: 0.1,
@@ -877,8 +779,6 @@
             item.style.animationPlayState = 'paused';
             observer.observe(item);
         });
-
-        // NOTE: Le code JS bloquant le téléchargement a été supprimé ici.
     </script>
 </body>
 </html>
